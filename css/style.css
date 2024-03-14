@@ -1,0 +1,160 @@
+:root {
+    --dark-purple: #1d2039;
+    --light-purple: #242947;
+    --lighter-purple: #797e9a;
+    --green: #24a65b;
+    --orange: orange;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--dark-purple);
+    padding: 10px;
+}
+
+.card {
+    background-color: var(--light-purple);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: var(--light-purple);
+    border-radius: 10px;
+}
+
+header img {
+    width: 70px;
+}
+
+header h1 {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+header #user {
+    color: var(--lighter-purple);
+    font-weight: bold;
+}
+
+section {
+    margin-top: 10px;
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap-reverse;
+}
+
+.gameTable {
+    flex-basis: 350px;
+    flex-grow: 1000;
+    flex-shrink: 0;
+
+     display: flex;
+     flex-direction: column-reverse;
+     gap: 3px;
+}
+
+.choise {
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.gameButton {
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/mine_block.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.gameText {
+    color: var(--lighter-purple);
+    font-weight: cover;
+}
+
+.gameTable .line {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 3px;
+}
+
+.choise h2 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+}
+
+.scores {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.bet {
+    background-color: var(--dark-purple);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 13px;
+    color: white;
+    
+    flex-basis: 100px;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.play {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: var(--green);
+    border: 0;
+    border-radius: 15px;
+
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.play:hover, .bet:hover {
+    opacity: 0.90;
+}
+
+.play:active, .bet:active {
+    transform: scale(0.95);
+}
+
+.selected {
+    background-color: var(--orange);
+    
+}
+
+.gameButton.active {
+    background-image: url('../images/mine_block.png');
+}
+
+.gameButton.skeleton {
+    background-image: url('../images/death_block.png');
+}
+
+.gameButton.diamond {
+    background-image: url('../images/diamond_block.png');
+}
